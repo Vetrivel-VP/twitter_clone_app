@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Twitter Clone</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style/styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/c939d0e917.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container home-page">
+      <div class="navigationbar_container">
+        <div class="navigation">
+          <div class="logo">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="home_link">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="profile_container">
+            <div class="profile"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="tweets_search_container">
+          <input
+            type="text"
+            id="user_serach_input"
+            placeholder="Search Tweats"
+          />
+          <i class="fas fa-search fa-flip-horizontal"></i>
+        </div>
+        <div class="tweets_list">
+          <div class="tweet_container">
+            <div class="tweet_user_info">
+              <div class="user_profile"></div>
+              <div class="user_name_container">
+                <div class="user_fullname">Vetrivel Ravi</div>
+                <div class="user_username">@vel_vetri</div>
+              </div>
+            </div>
+            <div class="tweet_image_container">
+              <div class="tweet_image"></div>
+            </div>
+            <div class="tweet_text_container">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
+              tempore ipsam corrupti labore? Perferendis corrupti minus
+              voluptates earum. Minus animi fugit soluta voluptate minima ipsam
+              neque. Ducimus, facere! Voluptas, sed.
+            </div>
+            <div class="tweet_date_container">20 hours ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tweets_sideBar_container">
+        <div class="tweets_sidebar">
+          <div class="tweets_trending">
+            <h5>Trends for you</h5>
+            <ul>
+              <li>#Coding</li>
+              <li>#JavaScript</li>
+              <li>#Python</li>
+              <li>#HTML5</li>
+              <li>#CSS3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js" async defer></script>
+  </body>
+</html>
