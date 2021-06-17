@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Twitter Clone</title>
+    <link
+      rel="shortcut icon"
+      href="./img/icons8-twitter-48.png"
+      type="image/x-icon"
+    />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style/styles.css" />
@@ -11,6 +16,12 @@
     <script
       src="https://kit.fontawesome.com/c939d0e917.js"
       crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
   </head>
 
@@ -36,29 +47,25 @@
             type="text"
             id="user_serach_input"
             placeholder="Search Tweats"
+            onkeyup="onEnter(event)"
           />
-          <i class="fas fa-search fa-flip-horizontal"></i>
+          <i
+            class="fas fa-search fa-flip-horizontal"
+            onclick="getTwitterData()"
+          ></i>
         </div>
         <div class="tweets_list">
-          <div class="tweet_container">
-            <div class="tweet_user_info">
-              <div class="user_profile"></div>
-              <div class="user_name_container">
-                <div class="user_fullname">Vetrivel Ravi</div>
-                <div class="user_username">@vel_vetri</div>
-              </div>
-            </div>
-            <div class="tweet_image_container">
-              <div class="tweet_image"></div>
-            </div>
-            <div class="tweet_text_container">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
-              tempore ipsam corrupti labore? Perferendis corrupti minus
-              voluptates earum. Minus animi fugit soluta voluptate minima ipsam
-              neque. Ducimus, facere! Voluptas, sed.
-            </div>
-            <div class="tweet_date_container">20 hours ago</div>
+          <div class="tweets_welcome_message">
+            <h5>Welcome to Twitter Clone!</h5>
+            <p>
+              Using the above search bar to see what's happening around the
+              world
+            </p>
           </div>
+        </div>
+
+        <div class="next_page_container" id="next_page" onclick="OnNextPage()">
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
         </div>
       </div>
 
@@ -67,11 +74,11 @@
           <div class="tweets_trending">
             <h5>Trends for you</h5>
             <ul>
-              <li>#Coding</li>
-              <li>#JavaScript</li>
-              <li>#Python</li>
-              <li>#HTML5</li>
-              <li>#CSS3</li>
+              <li onclick="selectTrend(this)">#Coding</li>
+              <li onclick="selectTrend(this)">#JavaScript</li>
+              <li onclick="selectTrend(this)">#Python</li>
+              <li onclick="selectTrend(this)">#HTML5</li>
+              <li onclick="selectTrend(this)">#CSS3</li>
             </ul>
           </div>
         </div>

@@ -1,11 +1,13 @@
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 !important;
+  padding: 0;
+  background: #0f0f11;
 }
 
 .container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,6 +25,10 @@ body {
   margin-top: 35px;
   color: white;
   cursor: pointer;
+  width: 20%;
+  max-width: 200px;
+  min-width: 100px;
+  position: fixed;
 }
 
 .container .navigationbar_container .navigation .logo {
@@ -30,12 +36,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container .navigationbar_container .navigation .logo i {
   font-size: 35px;
+  color: #fff;
 }
 
 .container .navigationbar_container .navigation .home_link {
@@ -43,14 +50,14 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 35px;
   border-right: 3px solid #00adff;
   height: 40px;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container .navigationbar_container .navigation .home_link i {
@@ -62,30 +69,32 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 35px;
 }
 
 .container .navigationbar_container .navigation .profile_container .profile {
+  background: url("../img/Vetri.jpg");
+  background-size: cover;
+  background-position: center;
   width: 45px;
   height: 45px;
-  background: white;
   border: 1px solid #979797;
   border-radius: 50%;
 }
 
 .container .main {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container .main .tweets_search_container {
@@ -93,16 +102,16 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 35px 15px 35px 15px;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 35px 15px 10px 15px;
   border-bottom: 1px solid #979797;
 }
 
 .container .main .tweets_search_container input {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background: transparent;
   outline: none;
   border: none;
@@ -115,11 +124,21 @@ body {
   color: white;
   font-size: 25px;
   padding-left: 10px;
+  cursor: pointer;
 }
 
 .container .main .tweets_list {
   min-height: 500px;
   margin: 15px;
+}
+
+.container .main .tweets_list .tweets_welcome_message {
+  color: white;
+  text-align: center;
+}
+
+.container .main .tweets_list .tweets_welcome_message h5 {
+  margin-bottom: 0;
 }
 
 .container .main .tweets_list .tweet_container {
@@ -128,9 +147,10 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 10px;
+  margin-bottom: 20px;
   border: 1px solid #1c1c1c;
   border-radius: 20px;
   overflow: hidden;
@@ -142,8 +162,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 15px 15px 0px 15px;
 }
 
@@ -153,44 +173,59 @@ body {
   background: white;
   border: 1px solid #979797;
   border-radius: 50%;
+  background-size: cover !important;
+  background-position: center !important;
 }
 
-.container
-  .main
-  .tweets_list
-  .tweet_container
-  .tweet_user_info
-  .user_name_container {
+.container .main .tweets_list .tweet_container .tweet_user_info .user_name_container {
   margin-left: 10px;
   color: #ffffff;
+  height: 40px;
 }
 
-.container
-  .main
-  .tweets_list
-  .tweet_container
-  .tweet_user_info
-  .user_name_container
-  .user_fullname {
+.container .main .tweets_list .tweet_container .tweet_user_info .user_name_container .user_fullname {
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.container .main .tweets_list .tweet_container .tweet_user_info .user_name_container .user_username {
   font-size: 12px;
-}
-
-.container
-  .main
-  .tweets_list
-  .tweet_container
-  .tweet_user_info
-  .user_name_container
-  .user_username {
-  font-size: 10px;
 }
 
 .container .main .tweets_list .tweet_container .tweet_image_container {
   margin: 15px;
-  height: 200px;
+  height: 300px;
+  border: 1px solid #1c1c1c;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.container .main .tweets_list .tweet_container .tweet_image_container .tweet_image {
+  -ms-flex-preferred-size: 50% !important;
+      flex-basis: 50% !important;
+  -webkit-box-flex: 1 !important;
+      -ms-flex-positive: 1 !important;
+          flex-grow: 1 !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.container .main .tweets_list .tweet_container .tweet_Video_container {
+  margin: 15px;
+  height: 300px;
   border: 1px solid #1c1c1c;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.container .main .tweets_list .tweet_container .tweet_Video_container video {
+  width: 100%;
+  height: 100%;
 }
 
 .container .main .tweets_list .tweet_container .tweet_text_container {
@@ -207,10 +242,39 @@ body {
   margin: 0px 15px 15px 15px;
 }
 
+.container .main .next_page_container {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  padding: 6px;
+  text-align: center;
+  border: 1px solid #1c1c1c;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.container .main .next_page_container:hover {
+  background-color: #2d2d2d87;
+}
+
+.container .main .next_page_container:hover i {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.container .main .next_page_container i {
+  color: #47525d;
+}
+
 .container .tweets_sideBar_container {
   -webkit-box-flex: 0.65;
-  -ms-flex: 0.65;
-  flex: 0.65;
+      -ms-flex: 0.65;
+          flex: 0.65;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,9 +287,10 @@ body {
   margin: 35px;
   border: 1px solid #97979766;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 40px;
   overflow: hidden;
+  position: fixed;
 }
 
 .container .tweets_sideBar_container .tweets_sidebar .tweets_trending {
@@ -240,8 +305,9 @@ body {
 .container .tweets_sideBar_container .tweets_sidebar .tweets_trending h5 {
   margin-top: 0;
   margin-bottom: 10px;
-  font-size: 12px;
+  font-size: 15px;
   padding-left: 16px;
+  font-weight: 600;
 }
 
 .container .tweets_sideBar_container .tweets_sidebar .tweets_trending ul {
@@ -252,12 +318,13 @@ body {
 
 .container .tweets_sideBar_container .tweets_sidebar .tweets_trending li {
   padding-bottom: 12px;
-  border-top: 1px solid #d8d8d84d;
+  border-top: 0.5px solid #d8d8d84d;
   padding-top: 8px;
   padding-left: 16px;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  font-weight: 600;
 }
 
 .container .tweets_sideBar_container .tweets_sidebar .tweets_trending li:hover {
