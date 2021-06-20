@@ -1,4 +1,4 @@
-const URL = "http://localhost:3000/tweets";
+const URL = "https://vetritwittercloneapi.herokuapp.com/tweets";
 
 let nextPageUrl = null;
 
